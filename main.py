@@ -5,7 +5,7 @@ def int_to_roman(num):
     hundred = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
     thousand = ["", "M", "MM", "MMM"]
 
-    return thousands[num // 1000] + \
-           hundreds[(num % 1000) // 100] + \
-           tens[(num % 100) // 10] + \
-           ones[num % 10]
+    return thousand[num // 1000] + \
+           hundred[(num % 1000) // 100] + \
+           ten[(num % 100) // 10] + \
+           one[num % 10]
